@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Welcome prompt
+    // Personalized Welcome Message with prompt with user name 
     let userName = prompt("Welcome! What's your name?");
     if (userName) {
         document.getElementById("greeting").innerHTML = `<h2>Hello, ${userName}! Welcome to V.C.R's world.</h2>`;
     }
 
-    // Slideshow Logic
+    // Slideshow Stuff for the landing page 
     const images = [
         "assets/VCRphoto1.jpg",
         "assets/VCRphoto2.jpg",
@@ -25,5 +25,5 @@ document.addEventListener("DOMContentLoaded", function () {
         slideshowImg.src = images[index];
     }
 
-    setInterval(changeImage, 2000); // Change image every 2 seconds
+    setInterval(changeImage, 2000); // Change image every 2 seconds with interval 
 });
