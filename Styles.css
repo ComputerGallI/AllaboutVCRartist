@@ -1,1 +1,96 @@
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
+/* Header */
+header {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Flashing effect on hover */
+nav ul li a:hover {
+    animation: flash 0.5s infinite alternate;
+}
+
+@keyframes flash {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
+}
+
+/* Slideshow */
+.slideshow {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slideshow img {
+    width: 80%;
+    max-height: 500px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Rotating Logo at the Bottom */
+.bottom-logo {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#hover-logo {
+    width: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+
+#hover-logo:hover {
+    transform: rotate(360deg);
+}
+
+/* Footer */
+footer {
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/* Slideshow */
+.slideshow {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slideshow img {
+    width: 50%;  /* Adjusted to show the full image at a smaller size */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 400px; /* Prevents images from becoming too large */
+    object-fit: contain; /* Ensures the full image is visible */
+    transition: opacity 0.5s ease-in-out;
+}
