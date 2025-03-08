@@ -1,158 +1,163 @@
 /* --- Global Colors and Typography --- */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
-    color: #003366; /* Dark blue text on white background */
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* --- Rounded Corners for Boxes, Images, and Banner --- */
-  img, input, textarea, button, .banner, .contact-container, #email-preview {
-    border-radius: 10px;
-  }
-  
-  /* Header */
-  header {
-    background-color: #0044cc; /* Regular blue */
-    text-align: center;
-    padding: 20px;
-    position: relative;
-  }
-  
-  /* Logo Styling */
-  #logo {
-    width: 80px;
-    transition: transform 0.5s ease-in-out;
-    display: block;
-    margin: 0 auto 10px;
-  }
-  
-  /* Make the logo spin on hover */
-  #logo:hover {
-    transform: rotate(360deg);
-  }
-  
-  /* Navigation (nav links appear white on blue backgrounds) */
-  header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  header nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  header nav ul li a {
-    color: #ffffff; /* White text on blue background */
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  header nav ul li a:hover {
-    animation: flash 0.5s infinite alternate;
-  }
-  
-  @keyframes flash {
-    from { opacity: 1; }
-    to { opacity: 0.5; }
-  }
-  
-  /* Custom Greeting on Index Page (Top Right, Dark Blue) */
-  #greeting {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #003366;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background for legibility */
-    padding: 10px;
-    border-radius: 10px;
-  }
-  
-  /* Banner Section on Index Page */
-  .banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #ffffff; /* White background for banner area */
-    color: #003366; /* Dark blue text */
-  }
-  
-  .banner-left {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .banner-left img {
-    width: 80%;  /* Enlarged slideshow image */
-    max-height: 500px;
-    object-fit: contain;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .banner-right {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .banner-right button {
-    background-color: #0044cc;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .banner-right button:hover {
-    background-color: #003366;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #0044cc;
-    color: #ffffff; /* White text on blue background */
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  /* Contact Page Container */
-  .contact-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .album-selection, .contact-form {
-    flex: 1;
-    min-width: 300px;
-  }
-  
-  /* Email Preview Window (Light Blue Background with White Text) */
-  #email-preview {
-    background-color: #ADD8E6;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    color: #ffffff;
-  }
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-  
-  .spin-on-load {
-    animation: spin 1s linear;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  color: #003366; /* Dark blue text on white background */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Rounded Corners for All Boxes, Images, and Forms --- */
+img, input, textarea, button, .banner, .contact-container, #email-preview {
+  border-radius: 10px;
+}
+
+/* Header: Transparent Background */
+header {
+  background-color: transparent;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Logo Styling: Bigger at the Top */
+#logo {
+  width: 120px; /* Increased size */
+  transition: transform 0.5s ease-in-out;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Logo spins on hover */
+#logo:hover {
+  transform: rotate(360deg);
+}
+
+/* Navigation Menu in Header */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #003366; /* Dark blue text */
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Navigation link flashing effect on hover */
+header nav ul li a:hover {
+  animation: flash 0.5s infinite alternate;
+}
+
+@keyframes flash {
+  from { opacity: 1; }
+  to { opacity: 0.5; }
+}
+
+/* Custom Greeting on Index Page (Positioned Top Right, Dark Blue) */
+#greeting {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #003366;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for legibility */
+  border-radius: 10px;
+  margin: 0; /* Removed extra padding */
+}
+
+/* Banner Section on Index Page */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #003366;
+}
+
+/* Banner Left: Enlarged and Rounded Slideshow Image */
+.banner-left {
+  flex: 1;
+  text-align: left;
+}
+
+.banner-left img {
+  width: 90%;  /* Increased size */
+  max-height: 500px;
+  object-fit: contain;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Banner Right: Buttons Positioned Higher */
+.banner-right {
+  flex: 1;
+  text-align: right;
+  margin-top: 20px; /* Adjusted margin to move buttons higher */
+}
+
+.banner-right button {
+  background-color: #0044cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.banner-right button:hover {
+  background-color: #003366;
+}
+
+/* Footer Section */
+footer {
+  background-color: #0044cc;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Contact Page Container */
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.album-selection, .contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Email Preview Window (Light Blue Background with White Text) */
+#email-preview {
+  background-color: #ADD8E6;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  color: #ffffff;
+}
+/* Keyframes for the spin animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Class to trigger the spin animation on load */
+.spin-on-load {
+  animation: spin 1s linear;
+}

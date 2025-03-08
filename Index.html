@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta information and stylesheet link -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>V.C.R - Home</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Logo at the Top -->
+  <!-- Header Section with Logo and Navigation -->
   <header>
+    <!-- Larger logo at the top -->
     <img id="logo" src="assets/VCRlogo.png" alt="V.C.R Logo">
+    <!-- Navigation Menu -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -19,29 +22,31 @@
     </nav>
   </header>
   
-  <!-- Custom Greeting (only on landing) positioned at top right -->
+  <!-- Custom Greeting Section (only on landing page) -->
   <section id="greeting"></section>
   
-  <!-- Banner Section: Left (Slideshow) & Right (Buttons) -->
+  <!-- Banner Section: Divided into left (slideshow image) and right (buttons) -->
   <main>
     <div class="banner">
+      <!-- Banner Left: Enlarged and Rounded Slideshow Image -->
       <div class="banner-left">
-        <!-- Enlarged Slideshow Image -->
         <img id="slideshow-img" src="assets/VCRphoto1.jpg" alt="V.C.R Image">
       </div>
+      <!-- Banner Right: Buttons (positioned higher) -->
       <div class="banner-right">
-        <!-- Banner Buttons -->
         <button onclick="window.location.href='about.html'">About V.C.R</button>
         <button onclick="window.location.href='contact.html'">Get in Touch</button>
       </div>
     </div>
   </main>
   
+  <!-- Footer Section -->
   <footer>
     <p>&copy; 2025 V.C.R. All rights reserved.</p>
     <p>Designed by IndieNTM</p>
   </footer>
   
+  <!-- Link to JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
