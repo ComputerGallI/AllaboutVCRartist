@@ -1,96 +1,158 @@
-/* Body Styling */
+/* --- Global Colors and Typography --- */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: white;
-    color: #333;
+    background-color: #ffffff;
+    color: #003366; /* Dark blue text on white background */
     margin: 0;
     padding: 0;
-}
-
-/* Header */
-header {
-    background-color: #0044cc;
-    color: white;
+  }
+  
+  /* --- Rounded Corners for Boxes, Images, and Banner --- */
+  img, input, textarea, button, .banner, .contact-container, #email-preview {
+    border-radius: 10px;
+  }
+  
+  /* Header */
+  header {
+    background-color: #0044cc; /* Regular blue */
     text-align: center;
     padding: 20px;
-}
-
-/* Navigation */
-nav ul {
+    position: relative;
+  }
+  
+  /* Logo Styling */
+  #logo {
+    width: 80px;
+    transition: transform 0.5s ease-in-out;
+    display: block;
+    margin: 0 auto 10px;
+  }
+  
+  /* Make the logo spin on hover */
+  #logo:hover {
+    transform: rotate(360deg);
+  }
+  
+  /* Navigation (nav links appear white on blue backgrounds) */
+  header nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
+    margin: 0;
+  }
+  
+  header nav ul li {
     display: inline;
     margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
+  }
+  
+  header nav ul li a {
+    color: #ffffff; /* White text on blue background */
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
-}
-
-/* Flashing effect on hover */
-nav ul li a:hover {
+  }
+  
+  header nav ul li a:hover {
     animation: flash 0.5s infinite alternate;
-}
-
-@keyframes flash {
+  }
+  
+  @keyframes flash {
     from { opacity: 1; }
     to { opacity: 0.5; }
-}
-
-/* Slideshow */
-.slideshow {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.slideshow img {
-    width: 80%;
+  }
+  
+  /* Custom Greeting on Index Page (Top Right, Dark Blue) */
+  #greeting {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #003366;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background for legibility */
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Banner Section on Index Page */
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff; /* White background for banner area */
+    color: #003366; /* Dark blue text */
+  }
+  
+  .banner-left {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .banner-left img {
+    width: 80%;  /* Enlarged slideshow image */
     max-height: 500px;
-    object-fit: cover;
+    object-fit: contain;
     transition: opacity 0.5s ease-in-out;
-}
-
-/* Rotating Logo at the Bottom */
-.bottom-logo {
-    text-align: center;
-    margin: 20px 0;
-}
-
-#hover-logo {
-    width: 100px;
-    transition: transform 0.5s ease-in-out;
-}
-
-#hover-logo:hover {
-    transform: rotate(360deg);
-}
-
-/* Footer */
-footer {
+  }
+  
+  .banner-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .banner-right button {
     background-color: #0044cc;
-    color: white;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .banner-right button:hover {
+    background-color: #003366;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #0044cc;
+    color: #ffffff; /* White text on blue background */
     text-align: center;
     padding: 10px;
     position: absolute;
     bottom: 0;
     width: 100%;
-}
-/* Slideshow */
-.slideshow {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.slideshow img {
-    width: 50%;  /* Adjusted to show the full image at a smaller size */
-    height: auto; /* Maintains aspect ratio */
-    max-height: 400px; /* Prevents images from becoming too large */
-    object-fit: contain; /* Ensures the full image is visible */
-    transition: opacity 0.5s ease-in-out;
-}
+  }
+  
+  /* Contact Page Container */
+  .contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .album-selection, .contact-form {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* Email Preview Window (Light Blue Background with White Text) */
+  #email-preview {
+    background-color: #ADD8E6;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    color: #ffffff;
+  }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .spin-on-load {
+    animation: spin 1s linear;
+  }
+  
